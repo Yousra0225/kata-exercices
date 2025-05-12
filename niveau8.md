@@ -75,7 +75,7 @@ public class Solution {
     }
 }
 ``` 
-5. [Exercice 6 - Determines if the order of the braces is valid](https://www.codewars.com/kata/53da3dbb4a5168369a0000fe/train/java)
+6. [Exercice 6 - Determines if the order of the braces is valid](https://www.codewars.com/kata/53da3dbb4a5168369a0000fe/train/java)
 ```java
 import java.util.Stack;
 
@@ -100,6 +100,24 @@ public class BraceChecker {
             }
         }
         return stack.isEmpty();
+    }
+}
+```
+
+7. [Exercice 7](https://www.codewars.com/kata/53da3dbb4a5168369a0000fe/train/java)
+```java
+public class NumberUtils {
+    public static boolean isNarcissistic(int number) {
+        String strNum = String.valueOf(number);
+        int length = strNum.length();
+        int sum = 0;
+
+        for (char c : strNum.toCharArray()) {
+            int digit = Character.getNumericValue(c);
+            sum += Math.pow(digit, length);
+        }
+
+        return sum == number;
     }
 }
 ```
