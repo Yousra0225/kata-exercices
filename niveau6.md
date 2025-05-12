@@ -12,3 +12,19 @@ public class TimeFormatter {
 }
 
 ```
+
+9. [Exercice 9 : show the time in a himan readable format](https://www.codewars.com/kata/53da3dbb4a5168369a0000fe/train/java)
+``` java 
+public class Solution {
+
+  public int solution(int number) {
+    int sum = 0;
+    for (int i = 0; i < number; i++) {
+      if (i % 3 == 0 || i % 5 == 0) {
+        sum += i;
+      }
+    }
+    return sum;
+  }
+}
+```
