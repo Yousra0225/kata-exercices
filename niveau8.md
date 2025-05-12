@@ -75,3 +75,31 @@ public class Solution {
     }
 }
 ``` 
+5. [Exercice 6 - Determines if the order of the braces is valid](https://www.codewars.com/kata/53da3dbb4a5168369a0000fe/train/java)
+```java
+import java.util.Stack;
+
+public class BraceChecker {
+    public static boolean isValid(String braces) {
+        Stack<Character> stack = new Stack<>();
+
+        for (char ch : braces.toCharArray()) {
+            switch (ch) {
+                case '(': case '[': case '{':
+                    stack.push(ch);
+                    break;
+                case ')':
+                    if (stack.isEmpty() || stack.pop() != '(') return false;
+                    break;
+                case ']':
+                    if (stack.isEmpty() || stack.pop() != '[') return false;
+                    break;
+                case '}':
+                    if (stack.isEmpty() || stack.pop() != '{') return false;
+                    break;
+            }
+        }
+        return stack.isEmpty();
+    }
+}
+```
