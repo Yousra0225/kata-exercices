@@ -16,3 +16,16 @@ public class Kata {
     }
 }
 ``` 
+
+2. [Exercice 2 - Somme des élément d'une liste](https://www.codewars.com/kata/53da3dbb4a5168369a0000fe/train/java)
+```java
+public class SumArray {
+    public static double sum(double[] numbers) {
+        double sum = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            sum += numbers[i];
+        }
+        return sum;
+    }
+}
+```
