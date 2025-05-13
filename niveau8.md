@@ -249,3 +249,26 @@ public class HelloWorld {
     }
 }
 ```
+
+14. [remove string space](https://www.codewars.com/kata/57eae20f5500ad98e50002c5/train/java)
+```java 
+public class Kata {
+    public static String noSpace(final String x) {
+        String res = "";
+        for (int i = 0; i < x.length(); i++) {
+            if (x.charAt(i) != ' ') {  
+                res = res + x.charAt(i); 
+            }
+        }
+        return res; 
+    }
+}
+```
+
+15. [convert boolean to a string](https://www.codewars.com/kata/551b4501ac0447318f0009cd/train/java)
+```java
+public class BooleanToString{
+    return b== "true" ? "true" : "false";
+
+}
+```
