@@ -1,0 +1,32 @@
+1. [sum string as numbers ](https://www.codewars.com/kata/5324945e2ece5e1f32000370/train/java)
+```java
+public class Kata {
+  public static String sumStrings(String a, String b) {
+    int res1 = Integer.parseInt(a);
+    int res2 = Integer.parseInt(b);
+    int res = res1 + res2;
+    return String.valueOf(res);
+  }
+}
+```
+
+2. [differentiate a polynomial](https://www.codewars.com/kata/566584e3309db1b17d000027/train/java)
+```java
+ import java.math.BigInteger;
+
+public class Equation {
+    
+    public static BigInteger differentiate(String equation, long x) {
+        String[] arr = equation.split(" ");
+        BigInteger res = new BigInteger("0");
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i].equals("+")) {
+                res = res.add(new BigInteger(arr[i + 1]));
+            } else if (arr[i].equals("-")) {
+                res = res.add(new BigInteger(arr[i + 1]));
+            }
+        }
+        return res;
+    }
+}
+```
