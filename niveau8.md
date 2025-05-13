@@ -407,3 +407,25 @@ public class KeepHydrated  {
   }
 }
 ```
+
+27. [reversed words](https://www.codewars.com/kata/51c8991dee245d7ddf00000e/train/java)
+```java 
+public class ReverseWords {
+
+    public static String reverseWords(String str) {
+        String[] res = str.split(" "); 
+        StringBuilder result = new StringBuilder();
+
+        for (int i = res.length - 1; i >= 0; i--) {
+            result.append(res[i]);
+            if (i != 0) {
+                result.append(" ");
+            }
+        }
+
+        return result.toString();
+    }
+}
+
+
+``` 
