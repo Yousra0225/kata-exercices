@@ -398,3 +398,12 @@ public class Kata {
     }
 }
 ```
+
+26. [keep hydrated](https://www.codewars.com/kata/582cb0224e56e068d800003c/train/java)
+```java
+public class KeepHydrated  {
+  public static int liters(double time)  {    
+    return (int) Math.floor(time*0.5);
+  }
+}
+```
