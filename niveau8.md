@@ -335,11 +335,25 @@ public class DivisibleNb {
 }
 ```
 
-21. [remove exclamation marks ](https://www.codewars.com/kata/5545f109004975ea66000086/train/java)
+21. [remove exclamation marks ](https://www.codewars.com/kata/57a0885cbb9944e24c00008e/solutions/java)
 ```java 
 public class Kata {
     public static String removeExclamationMarks(String s) {
         return s.replaceAll("!", "");
     }
 }
+```
+
+22. [area or perimeter ](https://www.codewars.com/kata/5ab6538b379d20ad880000ab/solutions/java)
+```java 
+public class Solution {
+    public static int areaOrPerimeter(int l, int w) {
+        if (l == w) {
+            return l * w; 
+        } else {
+            return 2 * (l + w); 
+        }
+    }
+}
+
 ```
