@@ -366,3 +366,19 @@ class Solution {
   }
 }
 ```
+24. [sum mixed array](https://www.codewars.com/kata/57eaeb9578748ff92a000009/train/java)
+```java
+
+public class MixedSum {
+  public int sum(List<?> mixed) {
+          int total = 0;
+          for (Object item : mixed) {
+              if (item instanceof Integer) {
+                  total += (Integer) item;
+              } else if (item instanceof String) {
+                  total += Integer.parseInt((String) item);
+              }
+          }
+          return total;
+}}
+```
