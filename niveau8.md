@@ -310,3 +310,19 @@ public class Sid {
     }
 }
 ```
+
+19. [calculate average](https://www.codewars.com/kata/57a2013acf1fa5bfc4000921/train/java)
+```java
+public class Kata {
+    public static double findAverage(int[] array) {
+        if (array.length == 0) return 0;
+
+        int sum = 0;
+        for (int i = 0; i < array.length; i++) {
+            sum = sum + array[i];
+        }
+        double res = (double) sum / array.length;
+        return res;
+    }
+}
+```
