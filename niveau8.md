@@ -191,3 +191,18 @@ public class Kata {
     }
 }
 ``` 
+
+12. [sum of positive ](https://www.codewars.com/kata/56dec885c54a926dcd001095/solutions/java)
+```java 
+public class Positive {
+    public static int sum(int[] arr) {
+        int res = 0; 
+        for (int i = 0; i < arr.length; i++) { 
+          if(arr[i]>0){
+            res += Math.abs(arr[i]); 
+          }
+        }
+        return res;
+    }
+}
+```
