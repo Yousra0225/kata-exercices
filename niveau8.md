@@ -442,3 +442,19 @@ public class Kata{
   }
 }
 ```
+27. [square sum](https://www.codewars.com/kata/515e271a311df0350d00000f/train/java)
+```java
+import java.lang.Math;
+public class Kata
+ {
+  public static int squareSum(int[] n)
+  { 
+   int res = 0; 
+   for(int i = 0; i<n.length; i++){
+     res += Math.pow(n[i],2);
+     // res = res + Math.pow(n[i],2); !!!!!!
+   }
+    return (int) res;
+  }
+ }
+ ```
