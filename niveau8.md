@@ -357,3 +357,12 @@ public class Solution {
 }
 
 ```
+
+23. [is gonna survive](https://www.codewars.com/kata/59ca8246d751df55cc00014c/train/java)
+```java
+class Solution {
+  public static boolean hero(int bullets, int dragons) {
+    return bullets >= (long)dragons * 2;
+  }
+}
+```
