@@ -78,3 +78,16 @@ public class NumberUtils {
     }
 }
 ```
+8. [get the middle character](https://www.codewars.com/kata/56747fd5cb988479af000028/train/java)
+```java
+class Kata {
+  public static String getMiddle(String word) {
+    int n = word.length();
+    if(n%2==0){
+      return word.substring(n/2-1, n/2 +1);
+    }else{
+      return word.substring(n / 2, n / 2 + 1);
+    }
+  }
+} 
+```
