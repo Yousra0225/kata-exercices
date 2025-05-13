@@ -164,3 +164,23 @@ public class Solution {
   }
 }
 ```
+13. [recervse word](https://www.codewars.com/kata/5259b20d6021e9e14c0010d4/train/java)
+```java
+public class Kata {
+  public static String reverseWords(final String original) {
+    String[] words = original.split(" ", -1); 
+    StringBuilder result = new StringBuilder();
+
+    for (int i = 0; i < words.length; i++) {
+      StringBuilder reversed = new StringBuilder(words[i]).reverse();
+      result.append(reversed);
+      if (i < words.length - 1) {
+        result.append(" ");
+      }
+    }
+
+    return result.toString();
+  }
+}
+
+```
