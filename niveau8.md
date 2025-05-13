@@ -182,3 +182,12 @@ public class Kata {
     }
 }
 ```
+
+11. [opposit number ](https://www.codewars.com/kata/56dec885c54a926dcd001095/solutions/java)
+```java 
+public class Kata {
+    public static int opposite(int number) {
+        return -number;
+    }
+}
+``` 
