@@ -458,3 +458,16 @@ public class Kata
   }
  }
  ```
+28. [check how good are you](https://www.codewars.com/kata/5601409514fc93442500010b/train/java)
+```java
+public class Kata {
+  public static boolean betterThanAverage(int[] classPoints, int yourPoints) {
+    int sum = 0;
+    for (int score : classPoints) {
+      sum += score;
+    }
+    double average = (double) sum / classPoints.length;
+    return yourPoints > average;
+  }
+}
+```
