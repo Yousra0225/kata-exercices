@@ -334,3 +334,12 @@ public class DivisibleNb {
 	}
 }
 ```
+
+21. [remove exclamation marks ](https://www.codewars.com/kata/5545f109004975ea66000086/train/java)
+```java 
+public class Kata {
+    public static String removeExclamationMarks(String s) {
+        return s.replaceAll("!", "");
+    }
+}
+```
