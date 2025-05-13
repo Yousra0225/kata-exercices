@@ -488,3 +488,15 @@ public class Calculate {
   }
 }
 ```
+30. [find max and min values of a list](https://www.codewars.com/kata/577a98a6ae28071780000989/train/java)
+```java
+import java.util.Arrays;
+public class Kata{
+    public int min(int[] list){
+        return Arrays.stream(list).min().getAsInt();
+    }
+    public int max(int[] list){
+        return Arrays.stream(list).max().getAsInt();
+    }
+}
+```
