@@ -293,3 +293,11 @@ public class BasicOperations
   }
 }
 ```
+17. [make upper case](https://www.codewars.com/kata/57a0556c7cb1f31ab3000ad7/train/java)
+```java 
+class Upper {
+    public static String makeUpperCase(String str) {
+        return str.toUpperCase();
+    }
+}
+```
