@@ -240,3 +240,12 @@ public class Solution {
     }
 }
 ```
+
+13. [Hello world](https://www.codewars.com/kata/523b4ff7adca849afe000035)
+```java
+public class HelloWorld {
+    public static String greet() {
+       return "Hello World";
+    }
+}
+```
