@@ -91,3 +91,65 @@ class Kata {
   }
 } 
 ```
+
+9. [shortest word](https://www.codewars.com/kata/57cebe1dc6fdc20c57000ac9/train/java)
+```java:
+public class Kata {
+    public static int findShort(String s) {
+      String[] res = s.split(" ");
+      int min = Integer.MAX_VALUE;
+      for(String str: res){
+        if(str.length() < min){
+          min = str.length();
+        }
+      }
+      return min;
+    }
+}
+```
+
+10. [sum of numbers](https://www.codewars.com/kata/55f2b110f61eb01779000053/train/java)
+```java
+public class Sum {
+    public int GetSum(int a, int b) {
+        int res = 0;
+        if (a < b) {
+            for (int i = a; i <= b; i++) {
+                res += i;
+            }
+        } 
+        else if (a > b) {
+            for (int i = b; i <= a; i++) {
+                res += i;
+            }
+        } 
+        else {
+            return a;  
+        }
+        
+        return res;
+    }
+}
+```
+
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+11. [friend or foe](https://www.codewars.com/kata/55b42574ff091733d900002f/train/java)
+```java
+public class FriendsFilter {
+    public static List<String> friend(String[] x) {
+        List<String> result = new ArrayList<>();
+        
+        for (String name : names) {
+            if (name.length() == 4) {
+                res.add(name);
+            }
+        }
+        
+        return res;
+    }
+}
+```
