@@ -219,3 +219,24 @@ public class Kata{
     }
 }
 ```
+13. [repeat string ](https://www.codewars.com/kata/57a0e5c372292dd76d000d7e/train/java)
+A. Solution 1
+```java
+public class Kata {
+    public static String repeatStr(int n, String s) {
+        return s.repeat(n);
+    }
+}
+```
+B. Solution 2
+```java 
+public class Solution {
+    public static String repeatStr(int n, String s) {
+        String res = "";
+        for(int i = 0; i < n; i++) {
+            res += s;
+        }
+        return res;
+    }
+}
+```
