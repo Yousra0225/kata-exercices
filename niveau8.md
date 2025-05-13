@@ -104,4 +104,11 @@ public class BraceChecker {
 }
 ```
 
-
+7. 1. [Exercice 1 - Convert a number to a string ](https://www.codewars.com/kata/5265326f5fda8eb1160004c8/train/java)
+```java
+public class Kata {
+    public static String numberToString(int num){
+        return String.valueOf(num);
+    }
+}
+```
