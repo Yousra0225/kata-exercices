@@ -160,3 +160,25 @@ public class Kata {
     }
 }
 ```
+10. [convert a number to negative ](https://www.codewars.com/kata/55685cd7ad70877c23000102/train/java)
+a. Solution 1
+```java
+public class Kata {
+
+  public static int makeNegative(final int x) {
+    if(x<0){
+      return x;
+    }else{
+      return x*-1;
+    }  
+  }
+}
+```
+b. Solution 2
+```java 
+public class Kata {
+    public static int makeNegative(final int x) {
+        return x > 0 ? -x : x;
+    }
+}
+```
