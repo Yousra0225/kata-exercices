@@ -131,3 +131,32 @@ public class PerfectPower {
 }
 
 ```
+
+9. [reverse a string ](https://www.codewars.com/kata/54d4c8b08776e4ad92000835/train/java)
+a. Solution 1
+```java
+public class Kata {
+    public static String reverse(String str){
+        return new StringBuilder(str).reverse().toString();
+    }
+}
+```
+b. Solution 2
+```java
+public class Kata {
+    public static String solution(String str) {
+        char[] chars = str.toCharArray(); 
+        int i = 0;
+        int j = chars.length - 1;
+        while (i < j) {
+            char temp = chars[i];
+            chars[i] = chars[j];
+            chars[j] = temp;
+            i++;
+            j--;
+        }
+        
+        return new String(chars); 
+    }
+}
+```
