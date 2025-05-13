@@ -132,11 +132,6 @@ public class Sum {
 }
 ```
 
-
-```java
-import java.util.ArrayList;
-import java.util.List;
-
 11. [friend or foe](https://www.codewars.com/kata/55b42574ff091733d900002f/train/java)
 ```java
 public class FriendsFilter {
@@ -151,5 +146,21 @@ public class FriendsFilter {
         
         return res;
     }
+}
+```
+
+12. [regex valdiation pin](https://www.codewars.com/kata/55f8a9c06c018a0d6e000132/train/java)
+```java
+public class Solution {
+
+  public static boolean validatePin(String pin) {
+    if (pin.length() != 4 && pin.length() != 6) return false;
+
+    for (int i = 0; i < pin.length(); i++) {
+      if (!Character.isDigit(pin.charAt(i))) return false;
+    }
+
+    return true;
+  }
 }
 ```
