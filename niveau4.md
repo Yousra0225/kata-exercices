@@ -30,3 +30,27 @@ public class Equation {
     }
 }
 ```
+3. [string incrementer ](https://www.codewars.com/kata/54a91a4883a7de5d7800009c/train/java)
+```java
+import java.math.BigInteger;
+
+public class StringIncrementer {
+  public static String incrementString(String str) {
+    String prefix = str.replaceAll("\\d+$", "");        
+    String numberPart = str.substring(prefix.length()); 
+
+    if (numberPart.isEmpty()) {
+      return prefix + "1"; 
+    }
+
+    int numberLength = numberPart.length();               
+    BigInteger number = new BigInteger(numberPart);      
+    number = number.add(BigInteger.ONE);                
+
+    String incremented = String.format("%0" + numberLength + "d", number);
+
+    return prefix + incremented;
+  }
+}
+
+```
