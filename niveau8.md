@@ -112,3 +112,22 @@ public class Kata {
     }
 }
 ```
+8. [check if a number is a perfect power](https://www.codewars.com/kata/54d4c8b08776e4ad92000835/train/java)
+```java 
+import java.util.*;
+
+public class PerfectPower {
+    public static int[] isPerfectPower(int n) {
+        for (int k = 2; k <= (int)(Math.log(n) / Math.log(2)) + 1; k++) {
+            double root = Math.pow(n, 1.0 / k);
+            int m = (int) Math.round(root);
+            if (Math.pow(m, k) == n) {
+                return new int[]{m, k};
+            }
+        }
+        return null;
+    }
+
+}
+
+```
