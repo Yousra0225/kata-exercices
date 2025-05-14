@@ -815,3 +815,22 @@ public class SmashWords {
   }
 }
 ```
+
+53. [count positive/ sum of negatives](https://www.codewars.com/kata/576bb71bbbcf0951d5000044/train/java)
+```java 
+public class Kata {
+  public static int[] countPositivesSumNegatives(int[] input) {
+    if (input == null || input.length == 0) return new int[0];
+
+    int countPositive = 0;
+    int sumNegative = 0;
+
+    for (int num : input) {
+      if (num > 0) countPositive++;
+      else if (num < 0) sumNegative += num;
+    }
+
+    return new int[]{countPositive, sumNegative};
+  }
+}
+```
