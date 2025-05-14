@@ -624,3 +624,18 @@ public class Kata {
     }
 }
 ```
+37. [double char]
+```java 
+public class Solution{
+    public static String doubleChar(Strings){
+        char[] res = new char[s.length()*2];
+        int i = 0;
+        for(char element : s.toCharArray()){
+            res[i] = element ;
+            res[i+1] = element;
+            i+=2;
+        }
+        return new String();
+        }
+    }
+```
