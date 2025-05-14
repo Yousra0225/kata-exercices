@@ -590,3 +590,37 @@ public class Alarm {
 
 }
 ```
+
+36. [calculate the sum of elements of a table without including the min and the max](https://www.codewars.com/kata/576b93db1129fcf2200001e6/train/java)
+```java
+import java.util.Arrays;
+
+public class Kata {
+    public static int sum(int[] numbers) {
+        if (numbers == null || numbers.length <= 2) return 0;
+
+        int min = Arrays.stream(numbers).min().getAsInt();
+        int max = Arrays.stream(numbers).max().getAsInt();
+        int some = 0;
+
+        boolean minRemoved = false;
+        boolean maxRemoved = false;
+
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] == min && !minRemoved) {
+                minRemoved = true;
+                continue;
+            }
+
+            if (numbers[i] == max && !maxRemoved) {
+                maxRemoved = true;
+                continue;
+            }
+
+            some += numbers[i];
+        }
+
+        return some;
+    }
+}
+```
