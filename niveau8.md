@@ -991,3 +991,19 @@ public class Ghost {
     }
 }
 ```
+```java 
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+class SolutionTest {
+    @Test
+    void testColorIsValid() {
+        Ghost ghost = new Ghost();
+        String color = ghost.getColor();
+        assertTrue(
+            color.equals("white") || color.equals("yellow") ||
+            color.equals("purple") || color.equals("red")
+        );
+    }
+}
+```
