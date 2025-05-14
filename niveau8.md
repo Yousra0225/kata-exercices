@@ -868,3 +868,15 @@ public class Kata {
   }
 }
 ```
+57. [short long short](https://www.codewars.com/kata/50654ddff44f800200000007/train/java)
+```java
+public class ShortLongShort {
+  public static String solution(String a, String b) {
+    if (a.length() < b.length()) {
+      return a + b + a;
+    } else {
+      return b + a + b;
+    }
+  }
+}
+```
