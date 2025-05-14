@@ -727,3 +727,14 @@ public class RemoveChars {
       return str.substring(1,str.length()-1);
     }
 }
+```
+
+46. [counting sheeps](https://www.codewars.com/kata/54edbc7200b811e956000556/train/java)
+```java
+import java.util.*;
+public class Counter {
+    public static int countSheeps(Boolean[] arrayOfSheeps) {
+        return (int) Arrays.stream(arrayOfSheeps).filter(Objects::nonNull).filter(element -> element).count() ;
+    }
+}
+```
