@@ -1007,3 +1007,24 @@ class SolutionTest {
     }
 }
 ```
+
+66. [Simple Calculator](https://www.codewars.com/kata/5810085c533d69f4980001cf/train/java)
+```java 
+public class Calculator {
+  public static double calculate(double a, double b, String op) {
+    switch(op) {
+      case "+":
+        return a + b;
+      case "-":
+        return a - b;
+      case "*":
+        return a * b;
+      case "/":
+        if (b != 0) return a / b;
+        throw new IllegalArgumentException("Cannot divid by zero");
+      default:
+        throw new IllegalArgumentException("Invalid operator");
+    }
+  }
+}
+```
