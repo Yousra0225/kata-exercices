@@ -538,7 +538,7 @@ public class TotalPoints {
 }
 ```
 
-33. [Say hello in special way]()
+33. [Say hello in special way](https://www.codewars.com/kata/55225023e1be1ec8bc000390/train/java)
 ```java 
 public class Greeter {
   public static String greet(String name) {
