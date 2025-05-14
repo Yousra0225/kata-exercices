@@ -719,3 +719,11 @@ public class Move {
     }
 }
 ```
+
+45. [delete first and last character of a string](https://www.codewars.com/kata/56bc28ad5bdaeb48760009b0/train/java)
+```java 
+public class RemoveChars {
+    public static String remove(String str) {
+      return str.substring(1,str.length()-1);
+    }
+}
