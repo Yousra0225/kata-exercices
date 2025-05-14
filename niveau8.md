@@ -859,3 +859,12 @@ public class Kata {
   }
 }
 ```
+
+56. [My head is at the wrong end](https://www.codewars.com/kata/56f699cd9400f5b7d8000b55/train/java)
+```java
+public class Kata {
+  public static int[] fixTheMeerkat(String[] items) {
+    return new String[]{items[2], items[1], items[0]};
+  }
+}
+```
