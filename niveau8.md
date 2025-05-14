@@ -934,3 +934,20 @@ public class Kata {
 
 }
 ```
+
+62. [to square or not to square](https://www.codewars.com/kata/57f6ad55cca6e045d2000627/train/java)
+```java 
+    public static int[] squareOrSquareRoot(int[] array) {
+        int[] result = new int[array.length];
+        for (int i = 0; i < array.length; i++) {
+            double sqrt = Math.sqrt(array[i]);
+            if (sqrt == (int) sqrt) {
+                result[i] = (int) sqrt;
+            } else {
+                result[i] = array[i] * array[i];
+            }
+        }
+        return result;
+    }
+
+```
