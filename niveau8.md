@@ -767,3 +767,21 @@ public class Kata {
   }
 }
 ```
+
+49. [found the needle in the haystacj](https://www.codewars.com/kata/56676e8fabd2d1ff3000000c/train/java)
+```java 
+public class Kata {
+  public static String findNeedle(Object[] haystack) {
+    String res ="";
+    for (int i = 0; i<haystack.length; i++){
+      if("needle".equals(haystack[i])){
+       res =  "found the needle at position " + i;
+      }
+    }
+    return res;
+  }
+}
+```
+
+50. [invert values](https://www.codewars.com/kata/5899dc03bc95b1bf1b0000ad)
+```java 
