@@ -903,3 +903,21 @@ public class Kata {
 }
 
 ```
+
+60. [Find numbers which are divisible by given number](https://www.codewars.com/kata/55edaba99da3a9c84000003b/train/java)
+```java 
+import java.util.*;
+
+public class EvenNumbers {
+    public static int[] divisibleBy(int[] numbers, int divisor) {
+        List<Integer> res = new ArrayList<>();
+        for (int element : numbers) {
+            if (element % divisor == 0) {
+                res.add(element);
+            }
+        }
+        
+        return res.stream().mapToInt(Integer::intValue).toArray();
+    }
+}
+```
