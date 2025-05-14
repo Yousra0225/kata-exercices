@@ -951,3 +951,13 @@ public class Kata {
     }
 
 ```
+63. [calculate surface and area of a boxe](https://www.codewars.com/kata/565f5825379664a26b00007c/train/java)
+```java
+public class Kata {
+    public static int[] getSize(int width, int height, int depth) {
+        int surfaceArea = 2 * (width * height + width * depth + height * depth);
+        int volume = width * height * depth;
+        return new int[] {surfaceArea, volume};
+    }
+}
+```
