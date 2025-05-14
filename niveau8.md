@@ -972,3 +972,22 @@ public class Geometry{
   }
 }
 ```
+
+65. [color Ghost](https://www.codewars.com/kata/53f1015fa9fe02cbda00111a/train/java)
+```java
+import java.util.*;
+
+public class Ghost {
+    public static final String[] COLORS = {"yellow", "red", "white", "purple"};
+    private String color;
+
+    public Ghost() {
+        Random rand = new Random();
+        this.color = COLORS[rand.nextInt(COLORS.length)];
+    }
+
+    public String getColor() {
+        return this.color; 
+    }
+}
+```
