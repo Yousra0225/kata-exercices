@@ -512,3 +512,43 @@ public class Kata {
   
 }
 ```
+
+32. [calculate total points](https://www.codewars.com/kata/5bb904724c47249b10000131/solutions/java)
+```java
+public class TotalPoints {
+  
+    public static int points(String[] games) {
+      int totalpoints = 0;
+      for(String res : games){
+        String[] points = res.split(":");
+        int x = Integer.parseInt(points[0]);
+        int y = Integer.parseInt(points[1]);
+        if(x>y){
+          totalpoints+=3;
+        }
+        else if(x<y){
+          totalpoints=totalpoints;
+        }
+        else{
+          totalpoints+=1;
+        }
+      }
+      return totalpoints;
+    }
+}
+```
+
+33. [Say hello in special way]()
+```java 
+public class Greeter {
+  public static String greet(String name) {
+    
+    String res = String.format("Hello, %s!", name);
+    
+    if(name.equals("Johnny")){
+       res = "Hello, my love!";
+    }
+    return res;
+  }
+}
+```
