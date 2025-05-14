@@ -834,3 +834,16 @@ public class Kata {
   }
 }
 ```
+
+54. [count what is between](https://www.codewars.com/kata/55ecd718f46fba02e5000029/train/java)
+```java 
+public class Kata {
+  public static int[] between(int a, int b) {
+    int[] result = new int[b - a + 1];
+    for (int i = 0; i < result.length; i++) {
+      result[i] = a + i;
+    }
+    return result;
+  }
+}
+```
