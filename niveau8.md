@@ -961,3 +961,14 @@ public class Kata {
     }
 }
 ```
+
+64. [calculate area of a square](https://www.codewars.com/kata/5748838ce2fab90b86001b1a/train/java)
+```java
+public class Geometry{
+  public static double squareArea(double A){
+    double r = (2 * A) / Math.PI;
+    double area = r * r;
+    return Math.round(area * 100.0) / 100.0;
+  }
+}
+```
