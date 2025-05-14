@@ -783,5 +783,12 @@ public class Kata {
 }
 ```
 
-50. [invert values](https://www.codewars.com/kata/5899dc03bc95b1bf1b0000ad)
+50. [invert values](https://www.codewars.com/kata/5899dc03bc95b1bf1b0000ad/train/java)
 ```java 
+import java.util.*;
+public class Kata {
+  public static int[] invert(int[] array) {
+    return Arrays.stream(array).map(e -> e*-1).toArray();
+    }
+}
+```
