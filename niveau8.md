@@ -921,3 +921,16 @@ public class EvenNumbers {
     }
 }
 ```
+
+61. [convert to binary](https://www.codewars.com/kata/59fca81a5712f9fa4700159a/train/java)
+```java 
+public class Kata {
+    public static int toBinary(int b) {
+        String binaryString = Integer.toBinaryString(b);
+        int result = Integer.parseInt(binaryString);
+        
+        return result;
+    }
+
+}
+```
