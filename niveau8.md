@@ -751,3 +751,19 @@ public class Maps {
   }
 }
 ```
+
+48. [convert number to reversed array of digits](https://www.codewars.com/kata/5583090cbe83f4fd8c000051/train/java)
+```java
+public class Kata {
+  public static int[] digitize(long n) {
+    String str = String.valueOf(n);
+    int[] result = new int[str.length()];
+    
+    for (int i = 0; i < str.length(); i++) {
+      result[i] = str.charAt(str.length() - 1 - i) - '0';
+    }
+    
+    return result;
+  }
+}
+```
