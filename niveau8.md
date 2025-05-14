@@ -552,3 +552,22 @@ public class Greeter {
   }
 }
 ```
+34. [Thinkful - Logic Drills: Traffic ligh](https://www.codewars.com/kata/58649884a1659ed6cb000072/train/java)
+```java
+public class TrafficLights {
+
+  public static String updateLight(String current) {
+    String res = "";
+    if( current == "green"){
+      res = "yellow";
+    }
+    else if( current == "yellow"){
+      res = "red";
+    }else{
+      res = "green";
+    }
+    return res;
+  }
+  
+}
+```
