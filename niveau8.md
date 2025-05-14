@@ -738,3 +738,16 @@ public class Counter {
     }
 }
 ```
+
+47. [lost without a map](https://www.codewars.com/kata/57f781872e3d8ca2a000007e/train/java)
+```java
+public class Maps {
+  public static int[] map(int[] arr) {
+    int[] newmap = new int[arr.length];
+    for (int i = 0; i < arr.length; i++) {
+      newmap[i] = arr[i] * 2;
+    }
+    return newmap;
+  }
+}
+```
