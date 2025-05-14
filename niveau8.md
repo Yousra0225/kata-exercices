@@ -500,3 +500,15 @@ public class Kata{
     }
 }
 ```
+
+31. [calculate the volume of a cuboid](https://www.codewars.com/kata/58261acb22be6e2ed800003a/train/java)
+```java
+public class Kata {
+
+  public static double getVolumeOfCuboid(final double length, final double width, final double height) {
+    // Your code here
+     return length * width * height;
+  }
+  
+}
+```
