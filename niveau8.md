@@ -806,3 +806,12 @@ public class Kata {
   }
 }
 ```
+
+52. [sentence smash](https://www.codewars.com/kata/53dc23c68a0c93699800041d/train/java)
+```java 
+public class Smashwords {
+  public static String smash(String[] words) {
+    return String.join(" ", words);
+  }
+}
+```
