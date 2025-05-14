@@ -792,3 +792,17 @@ public class Kata {
     }
 }
 ```
+
+51. [reduce but grow](https://www.codewars.com/kata/57f780909f7e8e3183000078/train/java)
+```java 
+import java.util.*;
+public class Kata {
+  public static int grow(int[] x) {
+    int res = 1;
+    for (int i = 0; i < x.length; i++) {
+      res *= x[i];
+    }
+    return res;
+  }
+}
+```
