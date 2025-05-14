@@ -660,3 +660,15 @@ public class HelpAlex{
   }
 }
 ```
+
+40. [calculate average](https://www.codewars.com/kata/563e320cee5dddcf77000158/train/java)
+```java 
+import java.util.*;
+public class School{
+
+ 	public static int getAverage(int[] marks){
+		return Arrays.stream(marks).sum() / marks.length;
+	}
+
+}
+```
