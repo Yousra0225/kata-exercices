@@ -184,3 +184,26 @@ public class Kata {
 }
 
 ```
+14. [hello word niveau 7](https://www.codewars.com/kata/584c7b1e2cb5e1a727000047/train/java)
+```java 
+public class HelloWorld {
+
+    public static String helloWorld() {
+        return new StringBuilder()
+            .append((char)72)  
+            .append((char)101) 
+            .append((char)108) 
+            .append((char)108) 
+            .append((char)111) 
+            .append((char)44)  
+            .append((char)32)  
+            .append((char)87)  
+            .append((char)111) 
+            .append((char)114) 
+            .append((char)108) 
+            .append((char)100) 
+            .append((char)33) 
+            .toString();
+    }
+}
+```
