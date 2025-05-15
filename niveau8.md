@@ -1260,6 +1260,22 @@ public class StringCleaning {
     }
 }
 ```
+82. [age range equation](https://www.codewars.com/kata/5803956ddb07c5c74200144e/train/java)
+```java
+public class Kata{
+  public static String datingRange(int age) {
+     int min, max;
 
+        if (age <= 14) {
+            min = (int) Math.floor(age - age * 0.10);
+            max = (int) Math.floor(age + age * 0.10);
+        } else {
+            min = (int) Math.floor(age / 2.0 + 7);
+            max = (int) Math.floor((age - 7) * 2);
+        }
 
+        return min + "-" + max;
+  }
+}
+```
 
