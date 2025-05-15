@@ -1251,3 +1251,15 @@ public class Kata{
  
 }
 ```
+
+81. [String cleaning](https://www.codewars.com/kata/57e1e61ba396b3727c000251/train/java)
+```java 
+public class StringCleaning {
+    public static String stringClean(String str) {
+        return str.replaceAll("[0-9]", "");
+    }
+}
+```
+
+
+
