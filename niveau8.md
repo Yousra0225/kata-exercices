@@ -1238,3 +1238,16 @@ public class Stairs {
     }
 }
 ```
+
+80. [sum the strings ](https://www.codewars.com/kata/5966e33c4e686b508700002d/train/java) 
+```java
+public class Kata{
+  
+  public static String sumStr(String a, String b){ 
+        int num1 = a.isEmpty() ? 0 : Integer.parseInt(a);
+        int num2 = b.isEmpty() ? 0 : Integer.parseInt(b);
+        return String.valueOf(num1 + num2);
+  }
+ 
+}
+```
