@@ -1052,3 +1052,22 @@ public class SortAndStar {
 
 }
 ```
+
+68. [remove an element from an array](https://www.codewars.com/kata/5769b3802ae6f8e4890009d2/train/java)
+```java
+import java.util.Arrays;
+public class Kata {
+
+  public static Object[] removeEveryOther(Object[] arr) {
+    int newSize = (arr.length + 1) / 2;
+    Object[] result = new Object[newSize];
+    for (int i = 0, j = 0; i < arr.length; i += 2, j++) {
+      result[j] = arr[i];
+    }
+
+    return result;
+  }
+
+}
+
+```
