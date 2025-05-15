@@ -1184,3 +1184,14 @@ public class Kata{
   }
 }
 ```
+77. [filtering even numbers](https://www.codewars.com/kata/566dc566f6ea9a14b500007b/train/java)
+```java
+import java.util.List;
+
+public class Kata13December {
+    public static List<Integer> filterOddNumber(List<Integer> listOfNumbers)
+    {
+        return listOfNumbers.stream().filter(element-> element %2!=0).toList();
+    }
+}
+```
