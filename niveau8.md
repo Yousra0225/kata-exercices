@@ -1137,3 +1137,15 @@ class Kata {
     }
 }
 ```
+
+73. [classy extensions]()
+```java
+public class Cat extends Animal{
+  public Cat(String name){
+    super(name);
+  }
+  public String speak(){
+    return this.name + " meows.";
+  }
+}
+```
