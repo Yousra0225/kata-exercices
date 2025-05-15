@@ -1100,3 +1100,31 @@ public class MonkeyCounter {
     }
 }
 ```
+
+71. [remove duplicates from an array](https://www.codewars.com/kata/57a5b0dfcf1fa526bb000118/train/java)
+```java
+public class Solution {
+  public static int[] distinct(int[] values) {
+    int[] res = new int[values.length];
+    int j = 0;
+    for (int i = 0; i < values.length; i++) {
+      boolean found = false;
+      for (int k = 0; k < j; k++) {
+        if (res[k] == values[i]) {
+          found = true;
+          break;
+        }
+      }
+      if (!found) {
+        res[j] = values[i];
+        j++;
+      }
+    }
+    int[] resf = new int[j];
+    for (int i = 0; i < j; i++) {
+      resf[i] = res[i];
+    }
+    return resf;
+  }
+}
+```
