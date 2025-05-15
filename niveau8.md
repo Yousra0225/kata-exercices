@@ -1278,4 +1278,12 @@ public class Kata{
   }
 }
 ```
+83. [is it digit](https://www.codewars.com/kata/567bf4f7ee34510f69000032/train/java)
+```java
+public class StringUtils {
+    public static boolean isDigit(String s) {
+        return s != null && s.length() == 1 && Character.isDigit(s.charAt(0));
+    }
+}
+```
 
