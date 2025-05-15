@@ -1195,3 +1195,24 @@ public class Kata13December {
     }
 }
 ```
+
+78. [exlamation marks](https://www.codewars.com/kata/57fb09ef2b5314a8a90001ed/train/java)
+```java 
+public class Solution {
+    public static String replace(final String s) {
+        String vowels = "aeiouAEIOU";
+        String result = "";
+
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            if (vowels.indexOf(c) != -1) {
+                result += "!";
+            } else {
+                result += c;
+            }
+        }
+
+        return result;
+    }
+}
+```
