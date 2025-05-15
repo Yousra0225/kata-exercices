@@ -227,3 +227,11 @@ public class Accumul {
     }
 }
 ```
+16. [reverse letter of a string](https://www.codewars.com/kata/58b8c94b7df3f116eb00005b/train/java)
+```java 
+public class Kata {
+    public static String reverseLetter(final String str) {
+        return new StringBuilder(str).reverse().toString();
+    }
+}
+```
