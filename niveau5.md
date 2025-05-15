@@ -168,3 +168,57 @@ class PasswordRegex {
     static final String REGEX = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[A-Za-z\\d]{6,}$";
 }
 ```
+
+
+```java  
+
+6. [string mix](https://www.codewars.com/kata/5629db57620258aa9d000014/solutions/java)
+```java 
+public class Mixing {
+
+    public static String mix(String s1, String s2) {
+        int[] freq1 = countLowerCase(s1);
+        int[] freq2 = countLowerCase(s2);
+
+        java.util.List<String> parts = new java.util.ArrayList<>();
+
+        for (int i = 0; i < 26; i++) {
+            int f1 = freq1[i];
+            int f2 = freq2[i];
+            int maxFreq = Math.max(f1, f2);
+
+            if (maxFreq > 1) {
+                char c = (char) ('a' + i);
+                StringBuilder sb = new StringBuilder();
+                if (f1 > f2) {
+                    sb.append("1:");
+                    for (int j = 0; j < f1; j++) sb.append(c);
+                } else if (f2 > f1) {
+                    sb.append("2:");
+                    for (int j = 0; j < f2; j++) sb.append(c);
+                } else {
+                    sb.append("=:");
+                    for (int j = 0; j < f1; j++) sb.append(c);
+                }
+                parts.add(sb.toString());
+            }
+        }
+
+        parts.sort((a, b) -> {
+            int lenDiff = b.length() - a.length();
+            if (lenDiff != 0) return lenDiff;
+            return a.compareTo(b);
+        });
+
+        return String.join("/", parts);
+    }
+
+    private static int[] countLowerCase(String s) {
+        int[] freq = new int[26];
+        for (char ch : s.toCharArray()) {
+            if (ch >= 'a' && ch <= 'z') freq[ch - 'a']++;
+        }
+        return freq;
+    }
+}
+```
