@@ -98,3 +98,31 @@ public class Car {
         chassis.component = axleLine.toString();
     }
 }
+
+```
+
+2. [simple pig latin](https://www.codewars.com/kata/520b9d2ad5c005041100000f/train/java)
+```java
+import java.util.*;
+
+public class PigLatin {
+    public static String pigIt(String str) {
+        List<String> strl = new ArrayList<>();
+        String[] mots = str.split(" ");
+      
+        for (int i = 0; i < mots.length; i++) {
+            strl.add(mots[i]);
+        }
+
+        for (int i = 0; i < strl.size(); i++) {
+            String mot = strl.get(i);
+            if (mot.matches("[a-zA-Z]+")) {
+                String firstLetter = mot.substring(0, 1);
+                String reste = mot.substring(1);
+                strl.set(i, reste + firstLetter + "ay");
+            }
+        }
+
+        return String.join(" ", strl);
+    }}
+```
