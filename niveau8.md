@@ -1028,3 +1028,27 @@ public class Calculator {
   }
 }
 ```
+67.[Sort and Star](https://www.codewars.com/kata/57cfdf34902f6ba3d300001e/solutions/java)
+```java
+import java.util.Arrays;
+
+public class SortAndStar {
+
+  public static String twoSort(String[] s) {
+    // Trier le tableau
+    Arrays.sort(s);
+    // Prendre la première chaîne
+    String first = s[0];
+    // Construire la chaîne avec "***" entre les lettres
+    StringBuilder sb = new StringBuilder();
+    for (int i = 0; i < first.length(); i++) {
+      sb.append(first.charAt(i));
+      if (i < first.length() - 1) {
+        sb.append("***");
+      }
+    }
+    return sb.toString();
+  }
+
+}
+```
