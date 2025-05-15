@@ -1175,3 +1175,12 @@ public class Solution {
   }
 }
 ```
+
+76. [making 6 toasts](https://www.codewars.com/kata/5834fec22fb0ba7d080000e8/train/java)
+```java
+public class Kata{
+  public static int sixToast(int num){
+    return Math.abs(num-6);
+  }
+}
+```
