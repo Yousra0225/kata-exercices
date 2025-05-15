@@ -222,3 +222,64 @@ public class Mixing {
     }
 }
 ```
+7. [Battle ships](https://www.codewars.com/kata/58d06bfbc43d20767e000074/train/java)
+```java
+import java.util.*;
+
+public class BattleShips {
+    public static Map<String, Double> damagedOrSunk(int[][] board, int[][] attacks) {
+        Map<Integer, Integer> boatSizes = new HashMap<>();
+        Map<Integer, Integer> boatHits = new HashMap<>();
+
+        int rows = board.length;
+        int cols = board[0].length;
+
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                int val = board[i][j];
+                if (val > 0) {
+                    boatSizes.put(val, boatSizes.getOrDefault(val, 0) + 1);
+                }
+            }
+        }
+        for (int[] attack : attacks) {
+            int x = attack[0] - 1;
+            int y = rows - attack[1];
+            if (x >= 0 && x < cols && y >= 0 && y < rows) {
+                int hit = board[y][x];
+                if (hit > 0) {
+                    boatHits.put(hit, boatHits.getOrDefault(hit, 0) + 1);
+                }
+            }
+        }
+        int sunk = 0;
+        int damaged = 0;
+        int notTouched = 0;
+        double points = 0.0;
+
+        for (Integer boatId : boatSizes.keySet()) {
+            int size = boatSizes.get(boatId);
+            int hits = boatHits.getOrDefault(boatId, 0);
+
+            if (hits == 0) {
+                notTouched++;
+                points -= 1;
+            } else if (hits < size) {
+                damaged++;
+                points += 0.5;
+            } else if (hits == size) {
+                sunk++;
+                points += 1;
+            }
+        }
+
+        Map<String, Double> result = new HashMap<>();
+        result.put("sunk", (double) sunk);
+        result.put("damaged", (double) damaged);
+        result.put("notTouched", (double) notTouched);
+        result.put("points", points);
+
+        return result;
+    }
+}
+```
