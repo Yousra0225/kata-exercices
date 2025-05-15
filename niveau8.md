@@ -1296,5 +1296,22 @@ public class Solution {
     }
 }
 ```
+85. [return substring instance count](https://www.codewars.com/kata/5168b125faced29f66000005/train/java)
+```java 
+public class Solution {
+    public static int substringCount(String fullText, String searchText) {
+        if (searchText == null || searchText.isEmpty()) return 0;
+        int count = 0;
+        int index = 0;
+        while ((index = fullText.indexOf(searchText, index)) != -1) {
+            count++;
+            index += searchText.length(); 
+        }
+        return count;
+    }
+}
+```
+
+
 
 
