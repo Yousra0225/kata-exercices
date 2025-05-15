@@ -86,3 +86,24 @@ public class Dinglemouse {
   }
 }
 ```
+
+11. [split the string](https://www.codewars.com/kata/515de9ae9dcfc28eb6000001/train/java)
+```java
+import java.util.*;
+
+public class StringSplit {
+    public static String[] solution(String s) {
+        if (s.length() % 2 != 0) {
+            s += "_";
+        }
+
+        String[] result = new String[s.length() / 2];
+
+        for (int i = 0; i < s.length(); i += 2) {
+            result[i / 2] = s.substring(i, i + 2);
+        }
+
+        return result;
+    }
+}
+```
