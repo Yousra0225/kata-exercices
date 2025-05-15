@@ -1216,3 +1216,25 @@ public class Solution {
     }
 }
 ```
+
+79. [draw stairs](https://www.codewars.com/kata/5b4e779c578c6a898e0005c5/train/java)
+```java 
+public class Stairs {
+    public static String draw(int n) {
+        String result = "";
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < i; j++) {
+                result += " ";
+            }
+            result += "I";
+            if (i != n - 1) {
+                result += "\n";
+            }
+        }
+        return result;
+    }
+    public static void main(String[] args) {
+        System.out.println(draw(7));
+    }
+}
+```
