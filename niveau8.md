@@ -1071,3 +1071,19 @@ public class Kata {
 }
 
 ```
+69. [printing array elements with comma delimiters](https://www.codewars.com/kata/56e2f59fb2ed128081001328/train/javascript)
+```java
+public class ArrayPrinter {
+
+    public static String printArray(Object[] array) {
+        String res = "";
+        for (int i = 0; i < array.length; i++) {
+            res += array[i];
+            if (i != array.length - 1) {
+                res += ",";
+            }
+        }
+        return res;
+    }
+}
+```
