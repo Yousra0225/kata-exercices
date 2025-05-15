@@ -231,7 +231,9 @@ public class Accumul {
 ```java 
 public class Kata {
     public static String reverseLetter(final String str) {
-        return new StringBuilder(str).reverse().toString();
+        String filtered = str.replaceAll("[^a-zA-Z]", "");
+        return new StringBuilder(filtered).reverse().toString();
     }
 }
+
 ```
