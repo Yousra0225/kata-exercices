@@ -1,0 +1,100 @@
+1. [Build a car](https://www.codewars.com/kata/5832d6e2565e120ae60000bb/train/java)
+```java 
+public class Car {
+    public Body body;
+    public Chassis chassis;
+
+    public class Body {
+        public String component;
+    }
+
+    public class Chassis {
+        public String component;
+    }
+
+    public Car(int length, int doors) throws Exception {
+        // Vérification des contraintes
+        if (length < 7) {
+            throw new Exception("Car length must be at least 7");
+        }
+        if (doors < 1) {
+            throw new Exception("There must be at least one door");
+        }
+        if (doors > length - 3) {
+            throw new Exception("Too many doors for this length");
+        }
+
+        body = new Body();
+        chassis = new Chassis();
+
+    
+        // Lignes
+        int layer1Length = length - 2;
+        int layer2Length = length - 1;
+
+        // ---- Construction de la 1re ligne : " ____\n"
+        StringBuilder top = new StringBuilder(" ");
+        for (int i = 0; i < layer1Length; i++) {
+            top.append("_");
+        }
+        top.append("\n");
+
+        // ---- Construction de la 2e ligne : "|[][]  []\\\n"
+        StringBuilder mid = new StringBuilder("|");
+        char[] middle = new char[layer2Length - 2]; // contenu entre | et \
+        for (int i = 0; i < middle.length; i++) {
+            middle[i] = ' ';
+        }
+        int front = 0;
+        int rear = middle.length - 1;
+        boolean toFront = true;
+        for (int i = 0; i < doors; i++) {
+            if (toFront) {
+                middle[front] = '[';
+                middle[front + 1] = ']';
+                front += 2;
+            } else {
+                middle[rear - 1] = '[';
+                middle[rear] = ']';
+                rear -= 2;
+            }
+            toFront = !toFront;
+        }
+
+        mid.append(new String(middle));
+        mid.append("\\\n");
+
+        // ---- Construction de la 3e ligne : "-o--o-'\n"
+        StringBuilder bottom = new StringBuilder();
+
+        int axles = 2;
+        if (length >= 12) {
+            axles++;
+            int extra = (length - 12) / 2;
+            axles += extra;
+        }
+
+        int totalAxleWidth = axles * 2 - 1;
+        int dashes = length - totalAxleWidth - 2; // -2 pour le quote et tiret final
+
+        boolean placeRear = true;
+        StringBuilder wheels = new StringBuilder();
+        for (int i = 0; i < axles; i++) {
+            if (i > 0) wheels.append("-");
+            wheels.append("o");
+        }
+
+        StringBuilder axleLine = new StringBuilder("-");
+        int leftDashes = dashes / 2;
+        int rightDashes = dashes - leftDashes;
+
+        for (int i = 0; i < leftDashes; i++) axleLine.append("-");
+        axleLine.append(wheels);
+        for (int i = 0; i < rightDashes; i++) axleLine.append("-");
+        axleLine.append("o-'");
+
+        // Attribution
+        body.component = top.toString() + mid.toString();
+        chassis.component = axleLine.toString();
+    }
+}
