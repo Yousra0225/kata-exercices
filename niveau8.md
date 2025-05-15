@@ -1167,4 +1167,11 @@ public class StudentFinalGrade{
 
 }
 ```
-75. [fix a code to show hello word]()
+75. [classic hello world](https://www.codewars.com/kata/57036f007fd72e3b77000023/train/java)
+```java 
+public class Solution {
+  public static String main(String args) {
+    return String.format("Hello World!");
+  }
+}
+```
