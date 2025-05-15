@@ -1128,3 +1128,12 @@ public class Solution {
   }
 }
 ```
+
+72. [Greet](https://www.codewars.com/kata/56f69f9a0e947263f3000052/train/java)
+```java 
+class Kata {
+    static String greet(String name, String owner) {
+        return name.equals(owner) ? "Hello boss" : "Hello guest";
+    }
+}
+```
