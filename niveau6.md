@@ -28,3 +28,61 @@ public class Solution {
   }
 }
 ```
+10. [say hello world](https://www.codewars.com/kata/5b0a80ce84a30f4762000069/train/java)
+```java
+import java.util.*;
+
+public class Dinglemouse {
+
+  private String name;
+  private int age;
+  private char sex;
+
+  // Pour suivre l'ordre des setters appelés (sans doublons)
+  private final List<String> setOrder = new ArrayList<>();
+
+  public Dinglemouse() {}
+
+  public Dinglemouse setAge(int age) {
+    this.age = age;
+    addOnce("age");
+    return this;
+  }
+
+  public Dinglemouse setSex(char sex) {
+    this.sex = sex;
+    addOnce("sex");
+    return this;
+  }
+
+  public Dinglemouse setName(String name) {
+    this.name = name;
+    addOnce("name");
+    return this;
+  }
+
+  private void addOnce(String field) {
+    if (!setOrder.contains(field)) {
+      setOrder.add(field);
+    }
+  }
+
+  public String hello() {
+    StringBuilder sb = new StringBuilder("Hello.");
+    for (String field : setOrder) {
+      switch (field) {
+        case "name":
+          sb.append(" My name is ").append(name).append(".");
+          break;
+        case "age":
+          sb.append(" I am ").append(age).append(".");
+          break;
+        case "sex":
+          sb.append(" I am ").append(sex == 'M' ? "male" : "female").append(".");
+          break;
+      }
+    }
+    return sb.toString();
+  }
+}
+```
