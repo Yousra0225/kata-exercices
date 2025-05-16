@@ -295,9 +295,23 @@ public class Solve{
 
 9. [Perimeter of squares in rectangle](https://www.codewars.com/kata/559a28007caad2ac4e000083/train/java)
 ```java
+import java.math.BigInteger;
+
 public class SumFct {
-    public static double perimeter(double m) {
-        return ((2 * m + 1) - Math.sqrt(4 * m + 1)) / (2 * m);
+
+    public static BigInteger perimeter(BigInteger n) {
+        BigInteger f0 = BigInteger.ONE;
+        BigInteger f1 = BigInteger.ONE;
+        BigInteger f = BigInteger.ZERO;
+
+        BigInteger limit = n.add(BigInteger.valueOf(2)); 
+        for (BigInteger i = BigInteger.valueOf(2); i.compareTo(limit) <= 0; i = i.add(BigInteger.ONE)) {
+            f = f0.add(f1);
+            f0 = f1;
+            f1 = f;
+        }
+        return f.subtract(BigInteger.ONE).multiply(BigInteger.valueOf(4));
     }
 }
+
 ```
