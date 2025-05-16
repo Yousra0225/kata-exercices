@@ -284,7 +284,7 @@ public class BattleShips {
 }
 ```
 
-8. [csv representation of array ]()
+8. [csv representation of array ](https://www.codewars.com/kata/5b1cd19fcd206af728000056/solutions/java)
 ```java 
 public class Solve{
     public static double solve(double m) {
