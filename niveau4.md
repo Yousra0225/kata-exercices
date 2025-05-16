@@ -56,13 +56,29 @@ public class StringIncrementer {
 ```
 4. [Adding big numbers ](https://www.codewars.com/kata/525f4206b73515bffb000b21/train/java)
 ```java
-import java.math.BigInteger;
 public class Kata {
   public static String add(String a, String b) {
-    BigInteger aa = new BigInteger(a);
-    BigInteger bb = new BigInteger(b);
-    BigInteger res = aa.add(bb);
-    return res.toString();
+    StringBuilder result = new StringBuilder();
+    int i = a.length() - 1;
+    int j = b.length() - 1;
+    int carry = 0;
+
+    while (i >= 0 || j >= 0 || carry != 0) {
+      int digitA = (i >= 0) ? a.charAt(i) - '0' : 0;
+      int digitB = (j >= 0) ? b.charAt(j) - '0' : 0;
+
+      int sum = digitA + digitB + carry;
+      result.append(sum % 10);
+      carry = sum / 10;
+
+      i--;
+      j--;
+    }
+    while (result.length() > 1 && result.charAt(result.length() - 1) == '0') {
+      result.setLength(result.length() - 1);
+    }
+    return result.reverse().toString();
   }
 }
+
 ```
