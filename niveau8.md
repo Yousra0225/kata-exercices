@@ -1561,3 +1561,13 @@ public class Solution {
     }
 }
 ```
+
+104. [A strange trip to the market](https://www.codewars.com/kata/55ccdf1512938ce3ac000056/train/java)
+```java
+public class Nessie{
+    public static boolean isLockNessMonster(String s) {
+        String lower = s.toLowerCase();
+        return lower.contains("tree fiddy") || lower.contains("3.50") || lower.contains("three fifty");
+    }
+}
+```
