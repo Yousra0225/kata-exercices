@@ -292,3 +292,12 @@ public class Solve{
     }
 }
 ```
+
+9. [Perimeter of squares in rectangle](https://www.codewars.com/kata/559a28007caad2ac4e000083/train/java)
+```java
+public class SumFct {
+    public static double perimeter(double m) {
+        return ((2 * m + 1) - Math.sqrt(4 * m + 1)) / (2 * m);
+    }
+}
+```
