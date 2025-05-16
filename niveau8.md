@@ -1571,3 +1571,15 @@ public class Nessie{
     }
 }
 ```
+105. [check if the period is late](https://www.codewars.com/kata/578a8a01e9fd1549e50001f1/train/java)
+```java
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+
+public class PeriodTime {
+    public static boolean periodIsLate(LocalDate last, LocalDate today, int cycleLength) {
+        long daysBetween = ChronoUnit.DAYS.between(last, today);
+        return daysBetween > cycleLength;
+    }
+}
+```
