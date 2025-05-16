@@ -1532,3 +1532,18 @@ public class Kata {
     }
 }
 ```
+102. [remove time from a date](https://www.codewars.com/kata/56b0ff16d4aa33e5bb00008e/train/java)
+```java
+
+import java.util.Arrays;
+
+public class Solution {
+  public static String shortenToDate(String longDate) {
+    String[] res = new String[1];
+    String[] str = longDate.split(",");
+    res[0] = str[0].trim();
+    
+    return String.join("", res);
+  }
+}
+```
