@@ -1734,3 +1734,13 @@ public class Kata {
     }
 }
 ```
+
+118. [holiday](https://www.codewars.com/kata/57e92e91b63b6cbac20001e5/train/java)
+```java 
+public class Kata {
+  public static int dutyFree(int normPrice, int discount, int holidayCost) {
+    double savingsPerBottle = normPrice * (discount / 100.0);
+    return (int)(holidayCost / savingsPerBottle);
+  }
+}
+```
