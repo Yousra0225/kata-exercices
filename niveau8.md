@@ -1547,3 +1547,17 @@ public class Solution {
   }
 }
 ```
+103. [generate range of integers](https://www.codewars.com/kata/55eca815d0d20962e1000106/train/java)
+```java
+public class Solution {
+    public static int[] generateRange(int start, int stop, int step) {
+        int size = ((stop - start) / step) + 1;
+        int[] range = new int[size];
+        int index = 0;
+        for (int i = start; i <= stop; i += step) {
+            range[index++] = i;
+        }
+        return range;
+    }
+}
+```
