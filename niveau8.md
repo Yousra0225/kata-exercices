@@ -1377,3 +1377,17 @@ public class Plural{
   }
 }
 ```
+92. [counting characters](https://www.codewars.com/kata/55f1b763dd670651620000ce/train/java)
+```java
+interface Count {
+	static int countCharOccurrences(String s, char c) {
+    int cpt = 0;
+    for( int i = 0; i<s.length(); i++){
+      if(s.charAt(i) ==  c){
+        cpt++;
+      }
+    }
+    return cpt;
+  }
+}
+```
