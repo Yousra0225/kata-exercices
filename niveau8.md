@@ -1688,3 +1688,20 @@ function maxCircleDiameter(sides, sideLength) {
   return sideLength / Math.tan(Math.PI / sides);
 }
 ```
+
+115. [forme phythagorean triple](https://www.codewars.com/kata/5951d30ce99cf2467e000013/train/java)
+```java 
+import java.util.*;
+public class PythagoreanTriple {
+    public static int pythagoreanTriple(int[] numbers) {
+        if (numbers.length != 3) return 0;
+        Arrays.sort(numbers);
+
+        int a = numbers[0];
+        int b = numbers[1];
+        int c = numbers[2];
+
+        return (a * a + b * b == c * c) ? 1 : 0;
+    }
+}
+```
