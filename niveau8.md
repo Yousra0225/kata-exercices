@@ -1418,3 +1418,19 @@ public class DayOfWeek {
         }
  }
 ```
+
+94. [Multiply table of number ](https://www.codewars.com/kata/5a2fd38b55519ed98f0000ce/train/java)
+```java
+public class Kata {
+    public static String multiTable(int num) {
+        int i = 1;
+        String res = "";
+        while (i <= 10) {
+            res += i + " * " + num + " = " + (i * num);
+            if (i != 10) res += "\n"; 
+            i++;
+        }
+        return res;
+    }
+}
+```
