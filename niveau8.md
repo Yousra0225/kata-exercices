@@ -1682,3 +1682,9 @@ public class TwiceAsOld {
   }
 }
 ```
+114. [Cirles in polygons]()
+```java 
+function maxCircleDiameter(sides, sideLength) {
+  return sideLength / Math.tan(Math.PI / sides);
+}
+```
