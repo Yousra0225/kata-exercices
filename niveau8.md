@@ -1624,3 +1624,18 @@ public class Kata
   }
 }
 ```
+
+109. [is it a number ](https://www.codewars.com/kata/57126304cdbf63c6770012bd/train/java)
+```java 
+public class MyUtilities {
+
+    public boolean isDigit(String s) {
+        try {
+            Double.parseDouble(s);  // essaie de parser en double (float aussi valide)
+            return true;
+        } catch (NumberFormatException e) {
+            return false;
+        }
+    }
+}
+```
