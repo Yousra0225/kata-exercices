@@ -54,3 +54,15 @@ public class StringIncrementer {
 }
 
 ```
+4. [Adding big numbers ](https://www.codewars.com/kata/525f4206b73515bffb000b21/train/java)
+```java
+import java.math.BigInteger;
+public class Kata {
+  public static String add(String a, String b) {
+    BigInteger aa = new BigInteger(a);
+    BigInteger bb = new BigInteger(b);
+    BigInteger res = aa.add(bb);
+    return res.toString();
+  }
+}
+```
