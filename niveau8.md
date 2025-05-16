@@ -1332,3 +1332,13 @@ public class Kata {
 
 ```
 
+88. [add length](https://www.codewars.com/kata/559d2284b5bb6799e9000047/train/java)
+```java
+public class AddLength{
+  public static String[] addLength(String[] str) {
+    String[] res = str.split(" ");
+    for (int i=0; i<res.length; i++){
+      res[i] = re[i] + " " + res[i].length();
+    }
+}}
+```
