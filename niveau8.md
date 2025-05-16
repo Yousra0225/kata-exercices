@@ -1434,3 +1434,19 @@ public class Kata {
     }
 }
 ```
+
+95. [fix the bug of infinished loop](https://www.codewars.com/kata/55c28f7304e3eaebef0000da/train/java)
+```java
+import java.util.*;
+
+class Kata {
+    public static List<Integer> CreateList(int number) {
+        List<Integer> list = new ArrayList<>(number);
+
+        for (int count = 1; count <= number;count++) {
+            list.add(count);
+        }
+        return list;
+    }
+}
+```
