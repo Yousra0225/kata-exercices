@@ -1658,3 +1658,18 @@ public class Dinglemouse {
   
 }
 ```
+
+112. [Playing with cubes]()
+```java 
+public class Cube
+{
+    private int Side = 0;
+    public int GetSide(){
+        return Side;
+    }
+    public void SetSide(int num)
+    {
+        Side = num;
+    }
+}
+```
