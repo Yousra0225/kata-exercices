@@ -263,3 +263,13 @@ class WordSearch {
 ```
 
 B. Solution 2 : 
+```java
+import java.util.*;
+public class WordSearch{
+  public static String[] findWord(String x, String[] y) {
+        return Arrays.stream(y)
+            .filter(s -> s.toLowerCase().contains(x.toLowerCase()))
+            .toArray(String[]::new);
+    }
+}
+```
