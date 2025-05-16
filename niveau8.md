@@ -1512,3 +1512,23 @@ public class Kata {
 
 }
 ```
+101. [smallest unused ID](https://www.codewars.com/kata/55eea63119278d571d00006a/train/java)
+```java
+import java.util.HashSet;
+
+public class Kata {
+    public static int nextId(int[] ids) {
+        HashSet<Integer> used = new HashSet<>();
+        for (int id : ids) {
+            if (id >= 0) {
+                used.add(id);
+            }
+        }
+        int smallest = 0;
+        while (used.contains(smallest)) {
+            smallest++;
+        }
+        return smallest;
+    }
+}
+```
