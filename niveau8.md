@@ -1753,3 +1753,13 @@ public class Kata {
   }
 }
 ```
+
+120. [Will you make it](https://www.codewars.com/kata/5861d28f124b35723e00005e/train/java)
+```java
+public class Kata {
+    public static boolean zeroFuel(int distanceToPump, int mpg, int fuelLeft) {
+        return mpg * fuelLeft >= distanceToPump;
+    }
+}
+
+```
