@@ -1484,3 +1484,20 @@ public class TipCalculator {
     }
 }
 ```
+98. [sum of multiples](https://www.codewars.com/kata/57241e0f440cd279b5000829/train/java)
+```java
+public class Kata {
+    public static long sumMul(int n, int m) {
+        if (n <= 0 || m <= 0) {
+            throw new IllegalArgumentException("n and m must be greater than 0");
+        }
+        int i = 1;
+        long res = 0;
+        while (n * i < m) {
+            res += n * i;
+            i++;
+        }
+        return res;
+    }
+}
+```
