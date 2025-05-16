@@ -1583,3 +1583,22 @@ public class PeriodTime {
     }
 }
 ```
+106. [compare within margin](https://www.codewars.com/kata/56453a12fcee9a6c4700009c/train/java)
+```java
+public class Solution {
+
+  public static int closeCompare(double a, double b) {
+    return closeCompare(a, b, 0.00001); // marge par défaut
+  }
+  
+  public static int closeCompare(double a, double b, double margin) {
+    if (Math.abs(a - b) <= margin) {
+      return 0;
+    } else if (a > b) {
+      return 1;
+    } else {
+      return -1;
+    }
+  }
+}
+```
