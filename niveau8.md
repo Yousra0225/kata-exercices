@@ -1631,7 +1631,7 @@ public class MyUtilities {
 
     public boolean isDigit(String s) {
         try {
-            Double.parseDouble(s);  // essaie de parser en double (float aussi valide)
+            Double.parseDouble(s); 
             return true;
         } catch (NumberFormatException e) {
             return false;
