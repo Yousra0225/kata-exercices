@@ -1744,3 +1744,12 @@ public class Kata {
   }
 }
 ```
+119. [Pillars](https://www.codewars.com/kata/5bb0c58f484fcd170700063d/train/java)
+```java 
+public class Kata {
+  public static int pillars(int n, int distance, int width) {
+    if (n <= 1) return 0;
+    return (n - 1) * distance * 100 + (n - 2) * width;
+  }
+}
+```
