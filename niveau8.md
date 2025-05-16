@@ -1321,3 +1321,14 @@ public class Kata {
 }
 ```
 
+87. [Convert US dollars to CNY](https://www.codewars.com/kata/5977618080ef220766000022/train/java)
+```java
+public class Kata {
+    public static String usdcny(double usd) {
+        double res = usd * 6.75;
+        return String.format("%.2f Chinese Yuan", res);
+    }
+}
+
+```
+
