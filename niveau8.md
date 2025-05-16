@@ -1462,3 +1462,25 @@ public class NoBoring {
     }
 }
 ```
+97. [tip calculator](https://www.codewars.com/kata/56598d8076ee7a0759000087/train/java)
+```java 
+public class TipCalculator {
+    public static Integer calculateTip(double amount, String rating) {
+        if (rating == null) return null;
+        switch (rating.toLowerCase()) {
+            case "terrible":
+                return 0;
+            case "poor":
+                return (int) Math.ceil(amount * 0.05);
+            case "good":
+                return (int) Math.ceil(amount * 0.10);
+            case "great":
+                return (int) Math.ceil(amount * 0.15);
+            case "excellent":
+                return (int) Math.ceil(amount * 0.20);
+            default:
+                return null;
+        }
+    }
+}
+```
