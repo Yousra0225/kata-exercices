@@ -237,3 +237,29 @@ public class Kata {
 }
 
 ```
+17. [partial word searching](https://www.codewars.com/kata/54b81566cd7f51408300022d/train/java)
+A. Solution 1 : 
+```java 
+import java.util.*;
+
+class WordSearch {
+    public static String[] findWord(String x, String[] y) {
+        List<String> result = new ArrayList<>();
+        String lowerX = x.toLowerCase();
+
+        for (String word : y) {
+            if (word.toLowerCase().contains(lowerX)) {
+                result.add(word);
+            }
+        }
+
+        if (result.isEmpty()) {
+            return new String[] {"Empty"};
+        }
+
+        return result.toArray(new String[0]);
+    }
+}
+```
+
+B. Solution 2 : 
