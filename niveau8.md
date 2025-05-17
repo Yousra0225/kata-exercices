@@ -1797,3 +1797,19 @@ public class Barycenter {
     }
 }
 ```
+
+124. [Did she say hello](https://www.codewars.com/kata/56a4addbfd4a55694100001f/train/java)
+```java
+public class Kata {
+    public static boolean validateHello(String greetings) {
+        String lowerCase = greetings.toLowerCase();
+        return lowerCase.contains("hello") ||
+               lowerCase.contains("ciao") ||
+               lowerCase.contains("salut") ||
+               lowerCase.contains("hallo") ||
+               lowerCase.contains("hola") ||
+               lowerCase.contains("ahoj") ||
+               lowerCase.contains("czesc");
+    }
+}
+```
