@@ -1882,3 +1882,18 @@ public class FloatingPointComparison {
     }
 }
 ```
+130. [Name on bilbord](https://www.codewars.com/kata/570e8ec4127ad143660001fd/train/java)
+```java
+public class Billboard {
+    public static int billboard(String name, int pricePerLetter) {
+        int total = 0;
+        for (int i = 0; i < name.length(); i++) {
+            total += pricePerLetter;
+        }
+        return total;
+    }
+    public static int billboard(String name) {
+        return billboard(name, 30);
+    }
+}
+```
