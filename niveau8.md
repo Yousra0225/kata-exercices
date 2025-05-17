@@ -1897,3 +1897,17 @@ public class Billboard {
     }
 }
 ```
+131. [Stairs](https://www.codewars.com/kata/56fc55cd1f5a93d68a001d4e/train/java)
+```java
+public class Kata {
+    public static int stairsIn20(int[][] stairs) {
+        int total = 0;
+        for (int[] day : stairs) {
+            for (int steps : day) {
+                total += steps;
+            }
+        }
+        return total * 20;
+    }
+}
+```
