@@ -1937,3 +1937,17 @@ public class Kata {
     }
 }
 ```
+134. [Closer elevator](https://www.codewars.com/kata/5c374b346a5d0f77af500a5a/train/java)
+```java
+public class Elevator {
+    public static String call(int left, int right, int call) {
+        int distLeft = Math.abs(call - left);
+        int distRight = Math.abs(call - right);
+        if (distLeft < distRight) {
+            return "left";
+        } else {
+            return "right";
+        }
+    }
+}
+```
