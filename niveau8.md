@@ -1927,3 +1927,13 @@ public class AgeDiff {
     }
 }
 ```
+
+133. [Exclamation marks series](https://www.codewars.com/kata/57faf12b21c84b5ba30001b0/train/java)
+```java
+public class Kata {
+    public static String remove(String s) {
+        String withoutExclamations = s.replace("!", "");
+        return withoutExclamations + "!";
+    }
+}
+```
