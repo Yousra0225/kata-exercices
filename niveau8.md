@@ -1771,3 +1771,14 @@ public class Kata {
     }
 }
 ```
+
+122. [String template](https://www.codewars.com/kata/55c90cad4b0fe31a7200001f/train/java)
+```java 
+public class Kata 
+{
+    public static String buildString(String... args)
+    {
+      return "I like " + String.join(", ", args) + "!";
+    }
+}
+```
