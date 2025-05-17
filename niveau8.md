@@ -1951,3 +1951,15 @@ public class Elevator {
     }
 }
 ```
+ [Find out whether the shape is a cube](https://www.codewars.com/kata/58d248c7012397a81800005c/train/java)
+ ```java
+ public class Cube {
+    public static boolean isCube(double volume, int side) {
+        if (volume <= 0 || side <= 0) {
+            return false;
+        }
+        return Math.abs(volume - Math.pow(side, 3)) < 1e-9;
+    }
+}
+
+```
