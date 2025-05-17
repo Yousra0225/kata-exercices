@@ -1851,3 +1851,26 @@ public class Solution {
   }
 }
 ```
+128. [Playing with cubes](https://www.codewars.com/kata/55c0ac142326fdf18d0000af/train/java)
+```java
+public class Cube {
+
+  private int side;
+
+  public Cube() {
+    this.side = 0;
+  }
+  public Cube(int side) {
+    this.side = Math.abs(side);
+  }
+
+  public int getSide() {
+    return side;
+  }
+  
+  public void setSide(int side) {
+    this.side = Math.abs(side);  
+  }
+
+}
+```
