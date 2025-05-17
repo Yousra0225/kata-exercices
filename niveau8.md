@@ -1951,7 +1951,7 @@ public class Elevator {
     }
 }
 ```
- [Find out whether the shape is a cube](https://www.codewars.com/kata/58d248c7012397a81800005c/train/java)
+ 135. [Find out whether the shape is a cube](https://www.codewars.com/kata/58d248c7012397a81800005c/train/java)
  ```java
  public class Cube {
     public static boolean isCube(double volume, int side) {
@@ -1962,4 +1962,24 @@ public class Elevator {
     }
 }
 
+```
+136. [Find the slope](https://www.codewars.com/kata/55a75e2d0803fea18f00009d/train/java)
+```java
+public class Slope {
+    public static String slope(int[] points) {
+        int a = points[0];
+        int b = points[1]; 
+        int c = points[2];
+        int d = points[3]; 
+
+        int deltaX = c - a;
+        int deltaY = d - b;
+
+        if (deltaX == 0) {
+            return "undefined";  
+        }
+        int slope = deltaY / deltaX;
+        return String.valueOf(slope);
+    }
+}
 ```
