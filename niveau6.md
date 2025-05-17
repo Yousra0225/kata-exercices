@@ -181,3 +181,16 @@ public class Kata {
     }
 }
 ```
+```java
+import org.junit.Test;
+
+public class SampleTest {
+    @Test
+    public void exampleTests() {
+        Tester.doTest(new int[]{1, 23, 2, -8, 5}, new int[][]{{3, -8}});
+        Tester.doTest(new int[]{1, 3, 23, 4, 2, -8, 5, 18}, new int[][]{{2, 23}});
+        Tester.doTest(new int[]{10, 20, -30, 100, 200}, new int[][]{{3, 100}, {4, 200}});
+    }
+}
+```
+
