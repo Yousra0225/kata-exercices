@@ -2069,3 +2069,25 @@ public class Converter {
   }
 }
 ```
+143. [Gravity flip](https://www.codewars.com/kata/5f70c883e10f9e0001c89673/train/java)
+```java
+import java.util.Arrays;
+import java.util.Collections;
+
+public class Kata {
+  public static int[] flip(char dir, int[] arr) {
+    int[] result = Arrays.copyOf(arr, arr.length);
+        if (dir == 'R') {
+      Arrays.sort(result); // Tri croissant
+    } else {
+      Integer[] temp = Arrays.stream(result).boxed().toArray(Integer[]::new);
+      Arrays.sort(temp, Collections.reverseOrder());
+      for (int i = 0; i < temp.length; i++) {
+        result[i] = temp[i];
+      }
+    }
+
+    return result;
+  }
+}
+```
