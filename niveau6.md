@@ -106,3 +106,43 @@ public class StringSplit {
     }
 }
 ```
+12. [Triangles made of random points](https://www.codewars.com/kata/5ec1692a2b16bb00287a6d8c/train/java)
+```java
+public class Solution {
+    public static double[] maxminAreas(int[][] points) {
+        int n = points.length;
+        double max = 0.0;
+        double min = Double.MAX_VALUE;
+        boolean foundTriangle = false;
+
+        for (int i = 0; i < n - 2; i++) {
+            int[] p1 = points[i];
+            for (int j = i + 1; j < n - 1; j++) {
+                int[] p2 = points[j];
+                for (int k = j + 1; k < n; k++) {
+                    int[] p3 = points[k];
+                    double area = triangleArea(p1, p2, p3);
+                    if (area > 0) {
+                        foundTriangle = true;
+                        if (area > max) max = area;
+                        if (area < min) min = area;
+                    }
+                }
+            }
+        }
+        if (!foundTriangle) return new double[]{0, 0};
+        
+        return new double[]{
+            Math.round(max * 10.0) / 10.0,
+            Math.round(min * 10.0) / 10.0
+        };
+    }
+    private static double triangleArea(int[] a, int[] b, int[] c) {
+        return 0.5 * Math.abs(
+            a[0] * (b[1] - c[1]) +
+            b[0] * (c[1] - a[1]) +
+            c[0] * (a[1] - b[1])
+        );
+    }
+}
+```
