@@ -149,35 +149,40 @@ public class Solution {
 
 14. [Remove a specific element](https://www.codewars.com/kata/581bb3c1c221fb8e790001ef/train/java)
 ```java
+import java.math.BigInteger;
 import java.util.*;
 
 public class Kata {
     public static int[][] selectSubarray(final int[] arr) {
-        List<int[]> results = new ArrayList<>();
+        int n = arr.length;
+        List<int[]> result = new ArrayList<>();
+        BigInteger minProduct = null;
         double minQ = Double.MAX_VALUE;
 
-        for (int i = 0; i < arr.length; i++) {
-            long sum = 0;
-            long product = 1;
-            boolean zeroSum = true;
+        for (int i = 0; i < n; i++) {
+            int sum = 0;
+            BigInteger product = BigInteger.ONE;
+            boolean valid = true;
 
-            for (int j = 0; j < arr.length; j++) {
-                if (j == i) continue;
-                sum += arr[j];
-                product *= arr[j];
+            for (int j = 0; j < n; j++) {
+                if (j != i) {
+                    sum += arr[j];
+                    product = product.multiply(BigInteger.valueOf(arr[j]));
+                }
             }
-            if (sum == 0) continue; 
-            double q = Math.abs((double) product / sum);
-            if (Double.compare(q, minQ) < 0) {
+            if (sum == 0) continue;
+
+            double q = product.abs().doubleValue() / Math.abs(sum);
+            if (q < minQ) {
                 minQ = q;
-                results.clear();
-                results.add(new int[]{i, arr[i]});
-            } else if (Double.compare(q, minQ) == 0) {
-                results.add(new int[]{i, arr[i]});
+                result.clear();
+                result.add(new int[]{i, arr[i]});
+            } else if (q == minQ) {
+                result.add(new int[]{i, arr[i]});
             }
         }
-        results.sort(Comparator.comparingInt(a -> a[0])); 
-        return results.toArray(new int[results.size()][]);
+        result.sort(Comparator.comparingInt(a -> a[0]));
+        return result.toArray(new int[0][]);
     }
 }
 ```
