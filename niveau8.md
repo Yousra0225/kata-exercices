@@ -1782,3 +1782,18 @@ public class Kata
     }
 }
 ```
+123. [Localize The Barycenter of a Triangle](https://www.codewars.com/kata/5601c5f6ba804403c7000004/train/java)
+```java
+import java.util.Arrays;
+
+public class Barycenter {
+    public static double[] barTriang(double[] a, double[] b, double[] c) {
+        double x = (a[0] + b[0] + c[0]) / 3.0;
+        double y = (a[1] + b[1] + c[1]) / 3.0;
+        x = Math.round(x * 10000.0) / 10000.0;
+        y = Math.round(y * 10000.0) / 10000.0;
+
+        return new double[] { x, y };
+    }
+}
+```
