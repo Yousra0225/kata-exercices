@@ -2006,3 +2006,16 @@ public class FirstClass {
     }
 }
 ```
+139. [Total cost calculator](https://www.codewars.com/kata/57b58827d2a31c57720012e8/train/java)
+```java
+public class Kata {
+    public static double fuelPrice(int litres, double pricePerLitre) {
+        int discountSteps = litres / 2;
+        int discountCents = discountSteps * 5;
+        if (discountCents > 25) discountCents = 25;
+                double discountedPrice = pricePerLitre - (discountCents / 100.0);
+                double total = litres * discountedPrice;
+                return Math.round(total * 100.0) / 100.0;
+    }
+}
+```
