@@ -1828,3 +1828,18 @@ public class Solution {
     }
 }
 ```
+126. [Holiday](https://www.codewars.com/kata/57e921d8b36340f1fd000059/train/java)
+```java
+public class SharkPontoon {
+    public static String shark(int sharkDistance, int sharkSpeed, int pontoonDistance, int youSpeed, boolean dolphin) {
+        if (dolphin) {
+            sharkSpeed /= 2;
+        }
+
+        double timeShark = (double) sharkDistance / sharkSpeed;
+        double timeYou = (double) pontoonDistance / youSpeed;
+
+        return timeYou < timeShark ? "Alive!" : "Shark Bait!";
+    }
+}
+```
