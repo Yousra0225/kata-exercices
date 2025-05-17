@@ -2041,3 +2041,23 @@ public class Hero {
     }
 }
 ```
+141. [Sum of differences in array](https://www.codewars.com/kata/5b73fe9fb3d9776fbf00009e/train/java)
+```java 
+import java.util.Arrays;
+import java.util.Collections;
+
+public class ZywOo {
+    public static int sumOfDifferences(int[] arr) {
+        if (arr.length <= 1) return 0;
+
+        Integer[] boxedArr = Arrays.stream(arr).boxed().toArray(Integer[]::new);
+        Arrays.sort(boxedArr, Collections.reverseOrder());
+
+        int sum = 0;
+        for (int i = 0; i < boxedArr.length - 1; i++) {
+            sum += boxedArr[i] - boxedArr[i + 1];
+        }
+        return sum;
+    }
+}
+```
