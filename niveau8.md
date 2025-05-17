@@ -1983,3 +1983,26 @@ public class Slope {
     }
 }
 ```
+
+137. [Find average](https://www.codewars.com/kata/55d277882e139d0b6000005d/train/java)
+```java
+public class GrassHopper {
+    public static double findAverage(int[] numbers) {
+        if (numbers == null || numbers.length == 0) return 0; 
+        
+        int sum = 0;
+        for (int num : numbers) {
+            sum += num;
+        }
+        return (double) sum / numbers.length;
+    }
+}
+138. [Fix the bug of sum of two small numbers]()
+```java
+public class FirstClass {
+    public static byte sum(byte a, byte b) {
+        byte c = (byte)(a + b);
+        return c;
+    }
+}
+```
