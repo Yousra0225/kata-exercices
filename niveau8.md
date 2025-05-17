@@ -1813,3 +1813,18 @@ public class Kata {
     }
 }
 ```
+125. [Enumerate magic](https://www.codewars.com/kata/54598d1fcbae2ae05200112c/train/java)
+```java
+import java.util.function.IntPredicate;
+
+public class Solution {
+    public static boolean all(int[] array, IntPredicate predicate) {
+        for (int element : array) {
+            if (!predicate.test(element)) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
+```
