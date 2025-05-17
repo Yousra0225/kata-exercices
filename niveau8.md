@@ -1911,3 +1911,19 @@ public class Kata {
     }
 }
 ```
+132. [How old will be in 2099](https://www.codewars.com/kata/5761a717780f8950ce001473/train/java)
+```java 
+public class AgeDiff {
+    public static String calculateAge(int birthYear, int year) {
+        int diff = year - birthYear;
+        if (diff == 0) {
+            return "You were born this very year!";
+        } else if (diff > 0) {
+            return "You are " + diff + " year" + (diff > 1 ? "s" : "") + " old.";
+        } else {
+            int yearsUntilBirth = -diff;
+            return "You will be born in " + yearsUntilBirth + " year" + (yearsUntilBirth > 1 ? "s" : "") + ".";
+        }
+    }
+}
+```
