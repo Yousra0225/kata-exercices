@@ -1843,3 +1843,11 @@ public class SharkPontoon {
     }
 }
 ```
+127. [centry from year](https://www.codewars.com/kata/5a3fe3dde1ce0e8ed6000097/train/java)
+```java
+public class Solution {
+  public static int century(int number) {
+     return (number + 99) / 100;
+  }
+}
+```
