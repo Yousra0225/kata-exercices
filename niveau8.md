@@ -1874,3 +1874,11 @@ public class Cube {
 
 }
 ```
+129. [Floating point comparison](https://www.codewars.com/kata/5f9f43328a6bff002fa29eb8/train/java)
+```java
+public class FloatingPointComparison {
+    public static boolean approxEquals(double a, double b) {
+        return Math.abs(a - b) <= 0.001;
+    }
+}
+```
