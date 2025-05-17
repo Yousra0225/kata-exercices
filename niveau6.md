@@ -146,3 +146,38 @@ public class Solution {
     }
 }
 ```
+
+14. [Remove a specific element](https://www.codewars.com/kata/581bb3c1c221fb8e790001ef/train/java)
+```java
+import java.util.*;
+
+public class Kata {
+    public static int[][] selectSubarray(final int[] arr) {
+        List<int[]> results = new ArrayList<>();
+        double minQ = Double.MAX_VALUE;
+
+        for (int i = 0; i < arr.length; i++) {
+            long sum = 0;
+            long product = 1;
+            boolean zeroSum = true;
+
+            for (int j = 0; j < arr.length; j++) {
+                if (j == i) continue;
+                sum += arr[j];
+                product *= arr[j];
+            }
+            if (sum == 0) continue; 
+            double q = Math.abs((double) product / sum);
+            if (Double.compare(q, minQ) < 0) {
+                minQ = q;
+                results.clear();
+                results.add(new int[]{i, arr[i]});
+            } else if (Double.compare(q, minQ) == 0) {
+                results.add(new int[]{i, arr[i]});
+            }
+        }
+        results.sort(Comparator.comparingInt(a -> a[0])); 
+        return results.toArray(new int[results.size()][]);
+    }
+}
+```
